@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <!--- viewport for cross device -->
+	<meta charset="UTF-8" />
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!--- Icons -->
+    <link href="../assets/icons/fontawesome/css/all.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body style="background-color:#2A2A2A">
+
+    <!-- NAVIGATION BAR AT THE TOP OF THE SCREEN -->
+    <div id="navbar">
+        <label>
+            <span id="headline">Draggable Container Example</span>
+        </label>
+
+        <!-- Rounded switch -->
+        <div id="editMode" style="padding-left: 2%; min-width: 20px;">
+            <label style="vertical-align: bottom ; font-size: x-small;">OFF</label>
+            <label class="switch" style="line-height: 2;">
+                <input type="checkbox" id="editModeBtn" value="false" onchange="editMode()">
+                <span class="slider round"></span>
+            </label>
+            <label style="vertical-align: bottom ; font-size: x-small;">ON</label>
+            <label id="editmode-label" style=" padding-left: 0.5em; font-size: 15px; vertical-align: middle ;">Move Objects</label>
+        </div>
+
+
+
+    </div>
+    <!-- END NAVBAR -->
+
+    <!-- MAP-->
+    <!-- OUTER CONTAINER WHICH CAN BE MOVED AROUND -->
+    <div id="container-outer">
+
+        <!-- INNER CONTAINER WHICH WILL BE SCALED UP AND DOWN -->
+        <div id="container-inner">
+            <!-- Background -->
+            <div id="bgdiv"></div>
+        </div>
+    </div>
+    <!-- END MAP-->
+
+    <!-- BAR AT THE BOTTOM OF THE SCREEN -->
+    <div id="bottom-bar">
+
+        <!-- Zoom In Button -->
+        <div style="padding-right: 1em; padding-bottom: 2em;">
+            <button id="zoomIn-btn" class="btn btn-circle btn-lg" type="button" onclick="zoomIn()" style="display: block;">
+                <i class="fas fa-search-plus"></i>
+            </button>
+        </div>
+
+         <!-- Zoom Out Button-->
+        <div style="padding-right: 1em; padding-bottom: 2em;">
+            <button id="zoomOut-btn" class="btn btn-circle btn-lg" type="button" onclick="zoomOut()" style="display: block;">
+                <i class="fas fa-search-minus"></i>
+            </button>
+        </div>
+
+        <!-- Center Button-->
+        <div style="padding-right: 2em; padding-bottom: 2em;">
+            <button id="center-btn" class="btn btn-circle btn-lg" type="button" onclick="centerOuterContainer()" style="display: block;">
+                <i class="material-icons">center_focus_weak</i>
+            </button>
+        </div>
+
+    </div>
+
+    <!-- SCRIPTS -->
+    <script src="target.js"></script>
+    <script src="eventhandler.js"></script>
+    <script src="script.js"></script>
+
+</body>
+
+</html>
