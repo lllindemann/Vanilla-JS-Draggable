@@ -134,8 +134,12 @@ SPECIFIC ELEMENTS
     position: absolute;
     left: 0;
     top: 200px;
-    width: 5000px;
-    height: 5000px;
+    width: 3000px;
+    height: 3000px;
+    background-size: 3000px auto;
+    background-image: url("floorplan.png");
+    background-color: #2A2A2A;
+    background-repeat: no-repeat;
 }
 
 /*Bottom-Bar*/
