@@ -66,7 +66,7 @@ var Target = class {
 
                 <div id="${this.id}clickhandler" class="clickhandler" style="width:100%;min-height:150px;height:150px; z-index: 1; position: absolute;  color: transparent;">
                     Click Handler
-                    <span id="move-objects-tooltip-${this.id}" class="tooltip top">Activate Switch <i><b>"Move Objects"</b></i>, <br />to be able to drag the targets</span>
+                    <span id="move-objects-tooltip-${this.id}" class="tooltip top">Activate Switch <i><b>"Move Objects"</b></i>, to be able to drag the Objects</span>
                 </div>
 
             </div>`
