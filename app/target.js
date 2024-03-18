@@ -25,26 +25,22 @@ var Target = class {
         switch (this.contentType.toLowerCase()) {
 
             case "video":
-                this.overlaytypeIcon = "fas fa-film";
+                this.overlaytypeIcon = "video";
                 break;
             case "audio":
-                this.overlaytypeIcon = "fas fa-music";
+                this.overlaytypeIcon = "audio";
                 break;
 
             case "3d":
-                this.overlaytypeIcon = "fas fa-cube";
+                this.overlaytypeIcon = "cube";
                 break;
 
             case "interactive":
-                this.overlaytypeIcon = "fas fa-hand-pointer";
+                this.overlaytypeIcon = "hand-tap";
                 break;
 
-            case "inactive":
-                this.overlaytypeIcon = "fas fa-eye-slash";
-                this.hidden = true;
-                break;
-            case "empty":
-                this.overlaytypeIcon = "fas fa-eye-slash";
+            case "eye-off":
+                this.overlaytypeIcon = "alert";
                 this.hidden = true;
                 break;
             default:
@@ -55,20 +51,13 @@ var Target = class {
         this.elementHTML =
             `
             <div class="draggable ${this.contentType.toLowerCase()}" id="${this.id}">
-                <div class="title-container">
-                    <i class="${this.overlaytypeIcon}" id="${this.id}overlaytype" style="font-size: 60px; z-index: 0;  line-height: 140px;">
-                     </i>
+                <div class="icon-container">
+                    <iconify-icon id="${this.id}overlaytype" icon="mdi:${this.overlaytypeIcon}" style="z-index: 0; font-size: 70px;"></iconify-icon>
                 </div>
-                <div class="title-container">
-                    <span class="target-title" id="${this.id}Title">${this.title}</span>
-                    <input type="hidden" value="${this.id}">
-                </div>
-
-                <div id="${this.id}clickhandler" class="clickhandler" style="width:100%;min-height:150px;height:150px; z-index: 1; position: absolute;  color: transparent;">
+                <div id="${this.id}clickhandler" class="clickhandler" style="width:100%;min-height:150px;height:150px; z-index: 1; position: absolute;  color: transparent; ">
                     Click Handler
                     <span id="move-objects-tooltip-${this.id}" class="tooltip top">Activate Switch <i><b>"Move Objects"</b></i>, to be able to drag the Objects</span>
                 </div>
-
             </div>`
             ;
 

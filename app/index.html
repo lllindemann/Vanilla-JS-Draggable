@@ -3,13 +3,14 @@
 
 <head>
     <!--- viewport for cross device -->
-	<meta charset="UTF-8" />
+    <meta charset="UTF-8" />
     <meta http-equiv="content-type" content="text/html; charset=utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <!--- Icons -->
-    <link href="../assets/icons/fontawesome/css/all.css" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <script src="https://code.iconify.design/iconify-icon/2.0.0/iconify-icon.min.js"></script>
+
+    <!--- Style -->
     <link rel="stylesheet" href="styles.css">
 </head>
 
@@ -29,7 +30,8 @@
                 <span class="slider round"></span>
             </label>
             <label style="vertical-align: bottom ; font-size: x-small;">ON</label>
-            <label id="editmode-label" style=" padding-left: 0.5em; font-size: 15px; vertical-align: middle ;">Move Objects</label>
+            <label id="editmode-label" style=" padding-left: 0.5em; font-size: 15px; vertical-align: middle ;">Move
+                Objects</label>
         </div>
 
 
@@ -54,21 +56,24 @@
 
         <!-- Zoom In Button -->
         <div style="padding-right: 1em; padding-bottom: 2em;">
-            <button id="zoomIn-btn" class="btn btn-circle btn-lg" type="button" onclick="zoomIn()" style="display: block;">
+            <button id="zoomIn-btn" class="btn btn-circle btn-lg" type="button" onclick="zoomIn()"
+                style="display: block;">
                 <i class="fas fa-search-plus"></i>
             </button>
         </div>
 
-         <!-- Zoom Out Button-->
+        <!-- Zoom Out Button-->
         <div style="padding-right: 1em; padding-bottom: 2em;">
-            <button id="zoomOut-btn" class="btn btn-circle btn-lg" type="button" onclick="zoomOut()" style="display: block;">
+            <button id="zoomOut-btn" class="btn btn-circle btn-lg" type="button" onclick="zoomOut()"
+                style="display: block;">
                 <i class="fas fa-search-minus"></i>
             </button>
         </div>
 
         <!-- Center Button-->
         <div style="padding-right: 2em; padding-bottom: 2em;">
-            <button id="center-btn" class="btn btn-circle btn-lg" type="button" onclick="centerOuterContainer()" style="display: block;">
+            <button id="center-btn" class="btn btn-circle btn-lg" type="button" onclick="centerOuterContainer()"
+                style="display: block;">
                 <i class="material-icons">center_focus_weak</i>
             </button>
         </div>
